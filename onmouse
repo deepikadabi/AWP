@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+   
+    <style>
+        .myclass {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .beauty {
+            background: black;
+            color: white;
+            padding: 7px;
+            font-size: 64px;
+            border-radius: 8px;
+        }
+    </style>    
+
+    <script>
+
+        function handleover(){
+            var id2ele = document.querySelector("#id2");
+            id2ele.style.background = "red";
+            id2ele.style.color = "White";
+            id2ele.innerHTML = "OVER";
+        }
+
+        function handleout(){
+            var id2ele = document.querySelector("#id2");
+            id2ele.style.background = "black";
+            id2ele.style.color = "yellow";
+            id2ele.innerHTML = "OUT";
+        }
+
+        function handledown(){
+            var id2ele = document.querySelector("#id2");
+            id2ele.style.background = "black";
+            id2ele.style.color = "yellow";
+            id2ele.innerHTML = "DOWN";
+        }
+
+        function handleup(){
+            var id2ele = document.querySelector("#id2");
+            id2ele.style.background = "Green";
+            id2ele.style.color = "red";
+            id2ele.innerHTML = "UP";
+        }
+
+        function handlemove(){
+            var id2ele = document.querySelector("#id2");
+            id2ele.style.background = "Green";
+            id2ele.style.color = "red";
+            id2ele.innerHTML = "Move";
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <div id="id1" class="myclass">
+
+        <div id="id2" class="beauty" 
+            onmouseover="handleover()" 
+            onmouseout="handleout()" 
+            onmousedown="handledown()"
+            onmouseup="handleup()"
+            onmousemove="handlemove()">
+            Hey Sweet !!
+        </div>
+
+    </div>
+
+</body>
+</html>
