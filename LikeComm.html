@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Like</title>
+
+    <style>
+
+        body{
+            margin: 0px;
+        }
+
+        .container {
+            margin-top: 20px;
+            height: 100vh;
+            width: 30vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: yellowgreen;
+            padding: 10px;
+
+        }
+
+        .post {
+            flex: 2;
+            height: 30rem;
+            width: 30rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .post img{
+            width: 30rem;
+            height: 30rem;
+            border-radius: 8px;
+        }
+
+        .likeComm {
+            display: flex;
+            width: 60rem;
+            flex: 1;
+            margin-top: 20px;
+            flex-direction: row;
+            background:yellow;
+            justify-content: start;
+            align-items: start;
+            align-content: space-around;
+
+        }
+
+        .btn {
+            flex-direction: row;
+            justify-content: start;
+            align-items: start;
+            flex: 1;
+        }
+
+        .comm {
+            display: flex;
+            flex: 2;
+            flex-direction: column;
+        }
+    </style>
+
+    <script>
+        let likeCounter = 0;
+        let commentCounter = 0;
+
+        function like(){
+            likeCounter++;
+            let likeEle = document.querySelector("#likeid");
+            likeEle.innerHTML = "Like " + likeCounter;
+        }
+
+        function comment(){
+            const newComm = document.createElement("div");
+            newComm.textContent = "User Comment .. "+ commentCounter;
+
+            newComm.style.color = "Black";
+            newComm.style.margin = "5px";
+            newComm.style.flexDirection = "column"
+
+            const commentBox = document.querySelector(".comm");
+            commentBox.appendChild(newComm);
+            commentCounter++;
+        }
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+
+
+        <div class="post">
+            <img src="post.jpg">
+        </div>
+
+
+        <div class="LikComm">
+            <button type="button" onclick="like()" id="likeid" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-heart"></span> 
+              </button>
+              
+
+            <button type="button" onclick="comment()" id="commentid" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-comment"></span> Comment
+              </button>
+        </div>
+
+        <div class="comm">
+            You are goregeouse !!!
+
+        </div>
+
+
+
+    </div>
+</body>
+</html>
