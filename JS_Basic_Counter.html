@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hello(){
+            alert("Internal Succeed");
+        }
+    </script>
+    <script src="JS_Basic_Counter.js"></script>
+
+
+
+</head>
+<body>
+    <button onclick="alert('Inline succeed')">Inline</button>
+    <button onclick="hello()">Internal</button>
+    <button onclick="ex()">External</button>
+
+    <div>
+        <div id="counterid" style="text-align: left; margin-left: 60px; font-size: 40px;">1</div>
+        <div style="flex-direction: row;">
+            <button  style="flex: 1;" onclick="increment()">Increment</button>
+            <button  style="flex: 1;" onclick="decrement()">Decrement</button>
+        </div>
+    </div>
+</body>
+</html>
