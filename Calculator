@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+
+    <style>
+
+        #contain{
+            width: 30vw; 
+            height: 80vh; 
+            background-color: rgb(118, 116, 121); 
+            justify-content: center; 
+            border-style: groove;
+            align-items: center;
+            margin: auto;
+        }
+
+        #in{
+            width: 98%;
+            background-color: rgb(163, 152, 154);
+            border: 3px solid rgb(104, 101, 101);
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        #keys{
+            width: 99%;
+            background-color: rgb(104, 101, 101);
+        }
+
+        #box{
+            margin: 3px;
+            border-style: groove;
+            background-color: rgb(163, 152, 154);
+            font-size: 24px;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-family: auto;         
+        }
+    </style>
+
+    <script>
+        function add(num) {
+            let number = document.querySelector("#in");
+            number.textContent += num;
+        }
+
+        function CLR() {
+            let clear = document.querySelector("#in");
+            clear.textContent = "";
+        }
+
+        function final_result() {
+            let x = document.querySelector("#in");
+            let y = x.textContent;
+            x.textContent = eval(y);
+        }
+    </script>
+</head>
+<body>
+ 
+    <!-- -------------------Main Container------------>
+    <div id="contain" style="display: flex; flex-direction: column; ">
+       
+        <div id="in" style="display: flex; flex: 2;">
+
+        </div>
+
+
+        <div id="keys" style="display: flex;flex-direction: column; flex: 5;">
+
+            <div id="box1" style="flex: 1; display: flex;">
+                <div id="box" style="flex: 1; display: flex;" onclick="add(7)">MC+</div>
+                <div id="box" style="flex: 1; display: flex;" onclick="add(7)">M+</div>
+                <div id="box" style="flex: 1; display: flex;" onclick="add('/')">/</div>
+                <div id="box" style="flex: 1; display: flex;" onclick="CLR()">CLR</div>
+            </div>
+
+            <div id="box1" style="flex: 1; display: flex;">
+                <div id="box" style="flex: 1; display: flex;" onclick="add(7)">7</div>
+                <div id="box" style="flex: 1; display: flex; " onclick="add(8)">8</div>
+                <div id="box" style="flex: 1; display: flex; " onclick="add(9)">9</div>
+                <div id="box" style="flex: 1; display: flex;" onclick="add('-')">-</div>
+            </div>
+
+            <div id="box1" style="flex: 1; display: flex;">
+                <div id="box" style="flex: 1; display: flex;" onclick="add(4)">4</div>
+                <div id="box" style="flex: 1; display: flex;" onclick="add(5)">5</div>
+                <div id="box" style="flex: 1; display: flex;" onclick="add(6)">6</div>
+                <div id="box" style="flex: 1; display: flex; " onclick="add('+')">+</div>
+            </div>
+
+            <div id="box1" style="flex: 1; display: flex; ">
+                <div id="box" style="flex: 1; display: flex;" onclick="add(1)">1</div>
+                <div id="box" style="flex: 1; display: flex;" onclick="add(2)">2</div>
+                <div id="box" style="flex: 1; display: flex;" onclick="add(3)">3</div>
+                <div id="box" style="flex: 1; display: flex;" onclick="final_result()">=</div>
+            </div>
+
+            <div style="flex: 1; display: flex;">
+                <div id="box" style="flex: 2; display: flex;" onclick="add(0)">0</div>
+                <div id="box" style="flex: 1; display: flex;" onclick="add('.')">.</div>
+                <div id="box" style="flex: 1; display: flex;" onclick="add('*')">*</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
