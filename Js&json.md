@@ -7,15 +7,15 @@ undefined
 ```let arr = [1,2,3];```
 undefined
 
-```let arr = [1, "A" , 3.16 , true, () =>{}, 11, function() {}];
-```undefined
-
-```console.log(arr);
-VM1913:1 (7) [1, "A", 3.16, true, ƒ, 11, ƒ]```
+```let arr = [1, "A" , 3.16 , true, () =>{}, 11, function() {}];```
 undefined
 
-```
-console.log(arr[3]);```
+```console.log(arr);```
+VM1913:1 (7) [1, "A", 3.16, true, ƒ, 11, ƒ]
+undefined
+
+
+```console.log(arr[3]);```
 VM1979:1 true
 undefined
 
@@ -55,8 +55,7 @@ VM3237:1 (9) [1, "A", "chetan", 3.16, true, "deep", "deepika", "sanam", 2]
 
 
 //Add element at last-1 index
-```let arr = [1, "A" , 3.16 , true, () =>{}, 11, function() {}];
-```
+```let arr = [1, "A" , 3.16 , true, () =>{}, 11, function() {}];```
 undefined
 ```console.log(arr);```
 VM3452:1 (7) [1, "A", 3.16, true, ƒ, 11, ƒ]
@@ -75,7 +74,8 @@ VM3469:1 (8) [1, "A", 3.16, true, ƒ, 11, "Deepika", ƒ]
 let person = {
     id : 10,
     fname: "sachin",
-    lname: "dabi",}; ```
+    lname: "dabi",}; 
+```
 undefined
 //access => we can access using (.)operator or []
 ```"fname" : "sachin"```
@@ -93,7 +93,8 @@ undefined
 let list = [
     {id: 10, fname: "Deepika",},
     {id: 11, fname: "dabi",},
-];  ```
+];  
+```
 
 
 ```list[1];```
